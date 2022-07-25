@@ -37,10 +37,10 @@ class BLEUART:
         self.__notify = self.__ble.gatts_notify
 
         self.__ble.active(False)
-        print("activating ble...")
+        #print("activating ble...")
         self.__ble.active(True)
         print("ble activated")
-        # 需要在active后才能设置名称，与doc的说明有点冲突？
+        # 需要在active后才能设置名称等
         self.__ble.config(gap_name=name)
 
         #self.__ble.config(rxbuf=rxbuf)
